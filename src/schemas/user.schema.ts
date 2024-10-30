@@ -16,6 +16,9 @@ export class User {
   @Prop({ required: true })
   username: string;
 
+  @Prop({ required: true })
+  role: string;
+
   @Prop({ required: true, type: 'date' })
   birthday: string;
 }

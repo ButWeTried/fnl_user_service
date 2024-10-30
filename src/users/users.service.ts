@@ -6,12 +6,11 @@ import {
   UnauthorizedException,
 } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
+import * as bcrypt from 'bcryptjs';
 import { Model, Types } from 'mongoose';
+import { User, UserDocument } from '../schemas/user.schema';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
-import { User, UserDocument } from '../schemas/user.schema';
-import { UpdatePasswordDto } from './dto/update-password.dto';
-import * as bcrypt from 'bcryptjs';
 
 @Injectable()
 export class UsersService {

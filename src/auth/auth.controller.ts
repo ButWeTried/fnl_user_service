@@ -31,7 +31,7 @@ export class AuthController {
   ) {}
 
   ////////// AUTHENTICATION //////////
-  @UseGuards(LocalAuthGuard)
+  // @UseGuards(LocalAuthGuard)
   @Post('auth/signup')
   async signup(@Body() createUserDto: CreateUserDto) {
     const saltOrRounds = 10;

@@ -14,6 +14,7 @@ async function bootstrap() {
   app.useGlobalPipes(new ValidationPipe({ whitelist: true }));
   swaggerConfig(app);
   await app.listen(process.env.APP_PORT);
+  logger.log(`Application listening on port ${process.env.APP_PORT}`);
 }
 
 bootstrap();
